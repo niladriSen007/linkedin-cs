@@ -18,11 +18,12 @@ import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/api/v1/posts")
+@RequestMapping("/core")
 @RequiredArgsConstructor
 public class PostController {
 
   private final IPostService postService;
+
   @PostMapping
   public ResponseEntity<PostDto> createPost(@RequestBody PostRequestDto postRequestDto,HttpServletRequest request) {
     PostDto postDto = postService.createPost(postRequestDto.getContent(), 1L);

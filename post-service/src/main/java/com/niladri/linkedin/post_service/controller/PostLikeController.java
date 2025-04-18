@@ -17,7 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 @RestController
 @Slf4j
-@RequestMapping("/api/v1/posts/like")
+@RequestMapping("/likes")
 public class PostLikeController {
   private final IPostLikeService postLikeService;
 
